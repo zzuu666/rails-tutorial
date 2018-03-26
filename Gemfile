@@ -37,10 +37,13 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'rails-controller-testing'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
-gem 'bootstrap', '~> 4.0'
+# gem 'bootstrap', '~> 4.0'
 gem 'faker', '1.7.3'
 gem 'nokogiri', '~> 1.8', '>= 1.8.2'
 gem 'will_paginate', '3.1.6'
+gem 'carrierwave',             '1.1.0'
+gem 'mini_magick',             '4.7.0'
+gem 'fog-aws',                 '2.0.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
