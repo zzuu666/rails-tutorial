@@ -44,6 +44,12 @@ gem 'will_paginate', '3.1.6'
 gem 'carrierwave',             '1.1.0'
 gem 'mini_magick',             '4.7.0'
 gem 'fog-aws',                 '2.0.0'
+# Graph QL
+gem 'graphql', '~> 1.7', '>= 1.7.13'
+# Graph QL Filter
+gem 'search_object'
+gem 'search_object_graphql'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -51,6 +57,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  # Graph QL
+  gem 'graphiql-rails', '1.4.4'
 end
 
 group :development do
