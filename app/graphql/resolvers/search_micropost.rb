@@ -20,6 +20,8 @@ class Resolvers::SearchMicropost
 
   # when "filter" is passed "apply_filter" would be called to narrow the scope
   option :filter, type: MicropostFilter, with: :apply_filter
+  option :count, type: types.Int, with: :apply_count
+  option :skip, type: types.Int, with: :apply_skip
 
   # apply_filter recursively loops through "OR" branches
   def apply_filter(scope, value)
@@ -40,5 +42,13 @@ class Resolvers::SearchMicropost
     value['OR'].reduce(branches) { |s, v| normalize_filters(v, s) } if value['OR'].present?
 
     branches
+  end
+
+  def apply_count(scope, value)
+    scope.limit(value)
+  end
+
+  def apply_skip(scope, value)
+    scope.offset(value)
   end
 end
